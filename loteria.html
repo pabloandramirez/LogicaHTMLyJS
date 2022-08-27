@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function loteria(n) {
+        return Math.round(Math.random()*n);
+    }
+
+    var numeroPensado = loteria(10);
+    var numero = parseInt(prompt("Ingrese un numero"));
+    
+
+    if (numero != numeroPensado) {
+        imprimir("Incorrecto!!");
+        if (numero > numeroPensado) {
+            imprimir("El numero ingresado es mayor al numero de la loteria")
+        } else {
+            imprimir("El numero ingresado es menor al numero de la loteria")
+        }
+    } else {
+        imprimir("Correcto!!!")
+    }
+
+</script>

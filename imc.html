@@ -1,0 +1,51 @@
+<meta charset="utf-8">
+
+<h1>PROGRAMA CALCULO IMC</h1>
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	
+	}
+
+	function imprimir(frase){
+
+		document.write("<big>" + frase + "</big>");
+		saltarLinea();
+
+	}
+
+	function calcularImc(peso,altura) {
+
+		imc = peso/(altura*altura);
+		return imc
+
+	}
+	//var imcChristian = calcularImc(71,1.72);
+	//var imcFelipe = calcularImc(75,1.73);
+
+	//imprimir("El IMC promedio de Christian y Felipe es " + (imcChristian+imcFelipe)/2);
+
+	nombre = prompt("Informe su nombre")
+	pesoInformado = prompt(nombre + " informe su peso");
+	alturaInformada = prompt(nombre + " informe su altura");
+	imcCalculado = calcularImc(pesoInformado, alturaInformada);
+
+	imprimir(nombre + " su IMC es de " + imcCalculado);
+
+	if (imcCalculado < 18.5) {
+		imprimir(nombre + " se encuentra por debajo de lo recomendado");
+	} else if (imcCalculado < 25){
+		imprimir(nombre + " se encuentra en los niveles correctos");
+	} else if (imcCalculado < 30){
+		imprimir(nombre + " se encuentro en sobrepeso");
+	} else {
+		imprimir(nombre + " se encuentra en los niveles de obesidad");
+	}
+
+
+</script>
